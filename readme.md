@@ -1,110 +1,71 @@
-# 🌍 Natours – Tour Booking Application
-> A full-stack web application to explore, book, and review nature tours worldwide. Built with Node.js, Express, MongoDB, and Pug. Secure, scalable.
----
-## 🚀 Features
-- ✅ User Authentication & Role-Based Authorization
-- 🏕 Browse, Filter & View Tour Packages
-- 💳 Book Tours
-- 🗺️ Interactive Map (Mapbox) for Tour Locations
-- 🌟 Write, Edit, and Delete Reviews
-- 🖼 Upload and Optimize Images (Sharp, Multer)
-- 🛡 Secure APIs (JWT, Helmet, XSS Protection)
-- 📧 Email Notifications (Nodemailer)
----
-## 🧑‍💻 Tech Stack
-- **Frontend**: Pug, HTML, CSS, JavaScript, Leaflet/Mapbox
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB, Mongoose
-- **Authentication**: JWT, Bcrypt
-- **Security**: Helmet, Rate Limiting, XSS Clean, Mongo Sanitize
-- **Image Handling**: Multer, Sharp
-- **Email Service**: Mailtrap / SendGrid (via Nodemailer)
-- **Dev Tools**: Parcel, Nodemon, Morgan, dotenv
+<h1 align="center"> Natours – Tour Booking Application</h1>  
+<p align="center">
+  A full-stack web application to explore, book, and review nature tours worldwide.  
+  <br>
+  Built with <b>Node.js, Express, MongoDB, and Pug</b>. Secure and scalable.  
+</p>
 
-## 📦 Installation
-### 1. Clone the Repository
-```bash
-git clone https://github.com/adarshtiwari908/natours.git
-cd natours
-````
-### 2. Install Dependencies
-```bash
-npm install
-```
-## ▶️ Running the App
-### Development
-```bash
-npm run dev
-```
-### Production
-```bash
-npm run build:js
-npm start
-```
----
+<p align="center">
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-18.x-339933?logo=node.js&logoColor=white"/></a>
+  <a href="https://expressjs.com/"><img src="https://img.shields.io/badge/Express.js-4.x-444444?logo=express&logoColor=white"/></a>
+  <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/MongoDB-6.x-47A248?logo=mongodb&logoColor=white"/></a>
+  <a href="https://mongoosejs.com/"><img src="https://img.shields.io/badge/Mongoose-ODM-800000?logo=mongoose&logoColor=white"/></a>
+  <a href="https://pugjs.org/"><img src="https://img.shields.io/badge/Pug-Template%20Engine-FFD43B?logo=pug&logoColor=black"/></a>
+  <a href="https://jwt.io/"><img src="https://img.shields.io/badge/JWT-Authentication-000000?logo=jsonwebtokens&logoColor=white"/></a>
+  <a href="https://github.com/expressjs/multer"><img src="https://img.shields.io/badge/Multer-File%20Upload-FF8800?logo=files&logoColor=white"/></a>
+  <a href="https://sharp.pixelplumbing.com/"><img src="https://img.shields.io/badge/Sharp-Image%20Processing-00CC99?logo=sharp&logoColor=white"/></a>
+  <a href="https://helmetjs.github.io/"><img src="https://img.shields.io/badge/Helmet-Security-222222?logo=helmet&logoColor=white"/></a>
+  <a href="https://render.com/"><img src="https://img.shields.io/badge/Deployed%20on-Render-46E3B7?logo=render&logoColor=white"/></a>
+</p>
 
-## 📁 Project Structure
+<p align="center">
+  <a href="https://natours-zr09.onrender.com/" target="_blank">
+    <img src="https://img.shields.io/badge/%20Live%20Demo-Visit%20App-F97316?style=for-the-badge&logo=vercel&logoColor=white"/>
+  </a>
+</p>
 
-```
-natours/
-│
-├── controllers/         # Route handlers
-├── models/              # Mongoose schemas
-├── routes/              # Express routes
-├── public/              # Static files
-├── views/               # Pug templates
-├── utils/               # Utility functions
-├── dev-data/            # Dummy data for testing
-├── app.js               # App setup
-├── server.js            # Server startup
-└── config.env           # Environment variables
-```
+<p align="center">
+  <img src="https://github.com/adarshtiwari908/natours/blob/master/Screenshot%202025-08-20%20010550.png" width="80%"/>
+  <img src="https://github.com/adarshtiwari908/natours/blob/master/Screenshot%202025-08-20%20010823.png" width="80%"/>
+  <img src="https://github.com/adarshtiwari908/natours/blob/master/Screenshot%202025-08-20%20010614.png" width="80%"/>
+  <img src="https://github.com/adarshtiwari908/natours/blob/master/Screenshot%202025-08-20%20010639.png" width="80%"/>
+  <img src="https://github.com/adarshtiwari908/natours/blob/master/Screenshot%202025-08-20%20010656.png" width="80%"/>
+  <img src="https://github.com/adarshtiwari908/natours/blob/master/Screenshot%202025-08-20%20010937.png" width="80%"/>
+  <img src="https://github.com/adarshtiwari908/natours/blob/master/Screenshot%202025-08-20%20010957.png" width="80%"/>
+  <img src="https://github.com/adarshtiwari908/natours/blob/master/Screenshot%202025-08-20%20011031.png" width="80%"/>
+</p>
 
 ---
 
-## 📡 API Endpoints
-
-### Tours
-
-* `GET /api/v1/tours` – Get all tours
-* `GET /api/v1/tours/:id` – Get tour by ID
-* `POST /api/v1/tours` – Create tour (admin)
-* `PATCH /api/v1/tours/:id` – Update tour
-* `DELETE /api/v1/tours/:id` – Delete tour (admin)
-
-### Users
-
-* `POST /api/v1/users/signup` – Register user
-* `POST /api/v1/users/login` – Login user
-* `GET /api/v1/users/me` – Get current user
-* `PATCH /api/v1/users/updateMe` – Update profile
-
-### Bookings
-
-* `GET /api/v1/bookings/checkout-session/:tourId` – Create Stripe session
-* `POST /webhook-checkout` – Stripe webhook for completed bookings
-
-### Reviews
-
-* `GET /api/v1/reviews` – Get all reviews
-* `POST /api/v1/tours/:tourId/reviews` – Create review for a tour
+##  Features
+-  User Authentication & Role-Based Authorization  
+-  Browse, Filter & View Tour Packages  
+-  Book Tours  
+-  Write, Edit, and Delete Reviews  
+-  Upload and Optimize Images (Sharp, Multer)  
+-  Secure APIs (JWT, Helmet, XSS Protection)  
+-  Email Notifications (Nodemailer)  
 
 ---
 
-## 📌 How It Works
+## 📦 Installation  
+[![Clone Repo](https://img.shields.io/badge/Step%201-Clone%20Repository-blue?style=for-the-badge)]()  
 
-1. Users can sign up, log in, and update profiles
-2. Browse tours with filters and sorting
-3. Book tours using Stripe payment gateway
-4. Leave reviews for completed tours
-5. Admins can manage users, tours, reviews, and bookings
+    git clone https://github.com/adarshtiwari908/natours.git
+    cd natours
 
----
-## 🔐 Security Highlights
+[![Install Deps](https://img.shields.io/badge/Step%202-Install%20Dependencies-green?style=for-the-badge)]()  
 
-* HTTP Headers secured with Helmet
-* Rate Limiting to prevent brute-force attacks
-* Data sanitized to prevent NoSQL Injection & XSS
-* Passwords hashed with Bcrypt
-* Token-based authentication (JWT)
----
+    npm install
+
+[![Run App](https://img.shields.io/badge/Step%203-Run%20the%20App-orange?style=for-the-badge)]()  
+
+**Development**  
+
+    npm run dev
+
+**Production**  
+
+    npm run build:js
+    npm start
+
